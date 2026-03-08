@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="conference ticket generator">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="css/style-css.css">
+  <link rel="stylesheet" href="css/all.min.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <title>Frontend Mentor | Conference ticket generator</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div class="img-lines"></div>
+  <div class="img-circle position-absolute"></div>
+  <div class="img-squiggly-line-top position-absolute"></div>
+  <div class="img-squiggly-line-bottom position-absolute"></div>
+
+  <div class="coding-conf position-absolute py-5">
+    <div class="container d-flex justify-content-center align-items-center flex-column">
+      <img class="img-fluid mb-4" src="assets/images/logo-full.svg" alt="">
+      <main class="">
+        <h1 class="text-light text-center mb-2">Your Journey to Coding Conf <br> 2025 Starts Here!</h1>
+        <p class="mb-4">Secure your spot at next year's biggest coding conference.</p>
+        <div class="full-inputs ">
+          <div class="text-light mb-2">Upload Avatar</div>
+
+          <div
+            class="upload-file d-flex justify-content-center align-items-center flex-column position-relative mb-3 overflow-hidden">
+            <img class="img-journey position-absolute" src="" alt="">
+            <div class="img-icon mb-3">
+              <img src="assets/images/icon-upload.svg" alt="">
+            </div>
+            <input type="file" class="position-absolute input-img-journey">
+            <div class="drag-drop">Drag and drop or click to upload</div>
+          </div>
+          <div class="warning-photo d-flex align-items-center gap-2 mb-4">
+            <img src="assets/images/icon-info.svg" alt="">
+            <span>Upload your photo (JPG or PNG, max size: 500KB).</span>
+          </div>
+
+          <div class="full-name mb-2">Full Name</div>
+          <input type="text" class="input-full-name mb-3">
+
+          <div class="full-name mb-2">Email Address</div>
+          <input type="email" class="input-email" placeholder="example@email.com">
+
+          <div class="error-upload d-flex gap-2 text-danger align-items-center  mt-2">
+            <i class="fa-solid fa-circle-info "></i>
+            <div>Please enter a valid email address</div>
+          </div>
+
+          <div class="full-name mb-2">GitHub Username</div>
+          <input type="text" class="input-github" placeholder="@yourusername">
+
+          <button class="generate-ticket mt-4">Generate My Ticket</button>
+        </div>
+      </main>
+      <!-- ====== ticket - conf ======= -->
+      <div class="ticket-coding-conf text-center">
+        <h1 class="mb-4">Congrats, <span class="name-title-ticket"></span>! <br> Your ticket is ready.</h1>
+        <p class="mb-5">
+          We've emailed your ticket to <br> <span class="email-ticket"></span> and will send updates in <br> the run up
+          to
+          the
+          event.
+        </p>
+        <div class="ticket-img d-flex flex-column justify-content-between text-start px-3 py-4">
+          <div>
+            <img class="img-fluid mb-2" src="assets/images/logo-full.svg" alt="">
+            <p class="date-conf"><span class="month-ticket"></span> <span class="day-ticket"></span>,<span
+                class="year-ticket"></span>/ Austin, TX</p>
+          </div>
+          <!-- ===== User -- Profile ==== -->
+          <div class="profile-user d-flex align-items-end gap-3">
+            <div class="img-profile">
+              <img src="" alt="">
+            </div>
+            <div class="name-and-github">
+              <div class="name-user"></div>
+              <div class="name-github d-flex gap-2 align-items-center">
+                <img src="assets/images/icon-github.svg" alt="">
+                <div class="user-git"></div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Form ends -->
+
+  <!-- Generated tickets starts -->
+
+  <!-- Congrats, || Full Name || ! Your ticket is ready.
+
+  We've emailed your ticket to ||==== Email Address ====|| 
+
+  Coding Conf
+  Jan 31, 2025 / Austin, TX -->
+
+  <!-- Generated tickets ends -->
+
+  <script src="main.js"></script>
+</body>
+
+</html>
