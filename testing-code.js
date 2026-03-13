@@ -1,20 +1,4 @@
-let nums = [10, -20, 300, 50, 100, -50];
 
-
-// First Method
-
-// let maxNumber = Math.max(...nums);
-
-// Second Method
-// let maxNumber = [];
-// for (let i = 0; i < nums.length; i++) {
-//     if (nums[i] > 0 && nums[i] > 100) {
-//         maxNumber.push(nums[i])
-//     }
-// }
-
-
-// console.log(maxNumber); // 300
 
 let textArea = document.querySelector("textarea");
 let button = document.querySelector("button");
@@ -43,11 +27,16 @@ console.log(first_non_repeating_letter("sssssss")) // ""
 
 console.log("=".repeat(33));
 
+
 function formatName(theName) {
-    let result = theName.trim().toLowerCase().split(" ").map((ele) => ele[0]).join(".")
-    return result[0].toUpperCase() + result.slice(1)
+    let convert = theName.toLowerCase();
+    let result = convert.trim().split(/\s+/).map((ele) => ele[0]).join(".")
+    return result[0].toUpperCase() + result.slice(1).toLowerCase()
 }
 
+console.log(formatName("  Osama   Elzero  ")); // O.e
 console.log(formatName("Osama Elzero")); // O.e
 console.log(formatName("Elzero Web School")); // E.w.s
-console.log(formatName("  Osama   Elzero  ")); // O..e
+
+console.log("=".repeat(33));
+

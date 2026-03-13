@@ -18,12 +18,11 @@ let imgProfile = document.querySelector(".img-profile img");
 let userName = document.querySelector(".name-user");
 let userGit = document.querySelector(".user-git");
 
-console.log(imgProfile)
-
 input_file.addEventListener("change", function () {
     let reader = new FileReader();
     reader.addEventListener("load", function () {
         fillPage.src = this.result;
+        fillPage.style.cssText = "top: 0; left: 50%; transform: translateX(-50%); wdith: 29%; object-fit:cover; border-radius: 15px; height: 100%;";
         imgIcon.style.cssText = "display: none";
         drag_drop_text.style.cssText = "display: none";
     })
@@ -35,6 +34,7 @@ let = months = ["January", "February", "March", "April", "May", "June", "July", 
 let date = new Date();
 
 generate_ticket.onclick = function () {
+
     let validEmail = /\w+\d{3,}\@[a-z]{5,}.\w+/g.test(input_email.value);
     if (validEmail === true) {
         imgProfile.src = fillPage.src;
@@ -56,11 +56,3 @@ generate_ticket.onclick = function () {
     }
 }
 
-let a = {
-    n: 1
-};
-
-let b = a;
-b.n = 42;
-
-console.log(a.n)
