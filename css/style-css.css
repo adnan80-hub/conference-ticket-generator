@@ -211,6 +211,12 @@ main {
     width: 500px;
 }
 
+@media (max-width: 992px) {
+    .ticket-coding-conf .paragraph-ticket {
+        width: unset;
+    }
+}
+
 .name-title-ticket {
     color: transparent;
     background-clip: text;
@@ -229,15 +235,12 @@ main {
 @media(max-width: 573px) {
     .full-ticket-profile {
         width: 105%;
-        height: 20vh;
     }
 }
 
-
-
 .ticket-top {
     top: 19px;
-    left: 4px;
+    left: min(4px, -23px);
 }
 
 .img-inside-ticket {
@@ -259,10 +262,18 @@ main {
     left: 20px;
 }
 
+@media(max-width:537px) {
+    .profile-user {
+        bottom: 70px;
+        left: 29px;
+    }
+
+}
+
 .profile-user .img-profile {
-    width: 60px;
-    height: 60px;
-    border-radius: 10px;
+    width: min(60px, 55px);
+    height: min(60px, 55px);
+    border-radius: 8px;
     background-color: var(--neutral-color-300);
     overflow: hidden;
 }
@@ -294,40 +305,3 @@ main {
 main {
     /* display: none; */
 }
-
-/* # Front-end Style Guide
-
-## Layout
-
-The designs were created to the following widths:
-
-- Mobile: 375px
-- Desktop: 1440px
-
-> 💡 These are just the design sizes. Ensure content is responsive and meets WCAG requirements by testing the full range of screen sizes from 320px to large screens.
-
-## Colors
-
-- Neutral 0: hsl(0, 0%, 100%)
-- Neutral 300: hsl(252, 6%, 83%)
-- Neutral 500: hsl(245, 15%, 58%)
-- Neutral 700: hsl(245, 19%, 35%)
-- Neutral 900: hsl(248, 70%, 10%)
-
-- Orange 500: hsl(7, 88%, 67%)
-- Orange 700: hsl(7, 71%, 60%)
-
-- Gradient (text): hsl(7, 86%, 67%) to hsl(0, 0%, 100%)
-
-## Typography
-
-### Body Copy
-
-- Font size (labels): 20px 
-
-### Font
-
-- Family: [Inconsolata](https://fonts.google.com/specimen/Inconsolata)
-- Weights: 400, 500, 700, 800
-
-> 💎 [Upgrade to Pro](https://www.frontendmentor.io/pro?ref=style-guide) for design file access to see all design details and get hands-on experience using a professional workflow with tools like Figma. The design file for this challenge also includes a design system and tablet layout to help you build a more accurate solution faster. */
