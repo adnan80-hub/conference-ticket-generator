@@ -238,14 +238,30 @@ main {
     }
 }
 
+
 .ticket-top {
     top: 19px;
-    left: min(4px, -23px);
+    left: 4px;
+}
+
+@media(max-width: 537px) {
+    .ticket-top {
+        top: 19px;
+        left: -23px;
+    }
+
 }
 
 .img-inside-ticket {
-    width: min(100%, 80%);
+    width: 80%;
     height: auto;
+}
+
+@media(max-width:537px) {
+    .img-inside-ticket {
+        width: 50%;
+        height: auto;
+    }
 }
 
 .date-conf {
@@ -264,8 +280,8 @@ main {
 
 @media(max-width:537px) {
     .profile-user {
-        bottom: 70px;
-        left: 29px;
+        bottom: 63px;
+        left: 19px;
     }
 
 }
